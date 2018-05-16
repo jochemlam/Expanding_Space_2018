@@ -13,8 +13,12 @@ public class PlayerShoot : MonoBehaviour
     //fire the bullet
     void Fire()
     {
-        Rigidbody2D bulletClone = (Rigidbody2D)Instantiate(bullet, transform.position, transform.rotation);
+
+        Vector3 bulletpos = (transform.position + new Vector3(2f, 0, 0));
+
+        Rigidbody2D bulletClone = (Rigidbody2D)Instantiate(bullet, bulletpos, transform.rotation);
         bulletClone.velocity = transform.right * bulletSpeed;
+        
     }
 
     // Update is called once per frame
