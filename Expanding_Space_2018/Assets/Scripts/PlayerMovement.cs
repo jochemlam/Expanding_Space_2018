@@ -2,17 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour {
 
-	void Start () {
-		
-	}
-	
+    private float speed = 5;
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
 
+
+
+        //up movement
+        if (Input.GetKey("w"))
+        {
+            transform.Translate((Vector2.up * speed) * Time.deltaTime);
         }
-            
+        //down movement
+        if (Input.GetKey("s"))
+        {
+            transform.Translate((Vector2.down * speed) * Time.deltaTime);
+        }
+        //left movement
+        if (Input.GetKey("a"))
+        {
+            transform.Translate((Vector2.left * (speed / 5)) * Time.deltaTime);
+        }
+        //right movement
+        if (Input.GetKey("d"))
+        {
+            transform.Translate((Vector2.right * speed) * Time.deltaTime);
+        }
+
+
     }
 }
