@@ -11,19 +11,19 @@ public class AstroidMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0, 0, 5) * Time.deltaTime);
+        //transform.Rotate(new Vector3(0, 0, 5) * Time.deltaTime);// potential rotation
 
-        //transform.Translate(Vector2.right * 0.1f);
-        // if (transform.position.x == 4)
-        // {
-        //     transform.Translate(Vector2.right * 0.1f);
-        //  }
-        //  if (transform.position.x == -4)
+        transform.Translate(Vector2.right * 0.1f);
+        if (transform.position.x == 4)
+        {
+            transform.Translate(Vector2.right * 0.1f);
+        }
+        if (transform.position.x == -4)
 
-        //   {
-        //       transform.Translate(Vector2.right * 0.1f);
+         {
+            transform.Translate(Vector2.right * 0.1f);
 
-        //}
+        }
 
     }
 }
