@@ -30,6 +30,5 @@ public class PlayerMovement : MonoBehaviour {
             transform.Translate((Vector2.right * speed) * Time.deltaTime);
         }
 
-
     }
 }
