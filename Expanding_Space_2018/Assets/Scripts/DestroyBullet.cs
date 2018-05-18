@@ -3,14 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyBullet : MonoBehaviour {
+    public Rigidbody2D bullet;
+    GameObject camera;
 
-    private int BulletX;
-    [SerializeField]
-    private float TimeToDestroy = 5f;
+    void Start () {
+        bullet = GetComponent<Rigidbody2D>();
+        camera = GameObject.FindGameObjectWithTag("MainCamera");
 
-	void Start () {
-        DestroyObject(this.gameObject, TimeToDestroy);
-	}
+    }
 
-   // BulletX = GameObject.FindGameObjectWithTag("Bullet").transform.position;
+    void Update()
+    {
+        float maxRange = camera.transform.position.x + 8.5f;
+        if (bullet.transform.position.x >= maxRange)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+
+
 }
