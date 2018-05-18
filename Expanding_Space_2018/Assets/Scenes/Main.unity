@@ -345,7 +345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ad371bec71d444bb84b175cc58e53f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreValue: 0
 --- !u!1 &1149914714
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +448,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4549158866470302, guid: 7c04e9486aac15f42889146c83b2f247, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.68
+      value: -6.06
       objectReference: {fileID: 0}
     - target: {fileID: 4549158866470302, guid: 7c04e9486aac15f42889146c83b2f247, type: 2}
       propertyPath: m_LocalPosition.y
@@ -489,11 +488,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4078414271398950, guid: 7c04e9486aac15f42889146c83b2f247, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4078414271398950, guid: 7c04e9486aac15f42889146c83b2f247, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.09
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c04e9486aac15f42889146c83b2f247, type: 2}
