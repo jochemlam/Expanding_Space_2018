@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class sdScore : MonoBehaviour {
+public class SdScore : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             addScore();
+            Destroy(this.gameObject);
         }
         
     }

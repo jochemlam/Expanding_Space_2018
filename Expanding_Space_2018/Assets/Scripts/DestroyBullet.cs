@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyBullet : MonoBehaviour {
     public Rigidbody2D bullet;
-    GameObject camera;
+    new GameObject camera;
 
     void Start () {
         bullet = GetComponent<Rigidbody2D>();
