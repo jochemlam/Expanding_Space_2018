@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyBullet : MonoBehaviour {
+public class DestroyScript : MonoBehaviour {
     public Rigidbody2D bullet;
     new GameObject camera;
 
@@ -20,6 +20,8 @@ public class DestroyBullet : MonoBehaviour {
             Destroy(this.gameObject);
         }
     }
+
+    
 
 
 
