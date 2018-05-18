@@ -5,24 +5,14 @@ using UnityEngine;
 public class AstroidMovement : MonoBehaviour
 {
 
-
-    public float Speed = 2.0f;
+    [SerializeField]
+    private float RotationSpeed = 50f;
 
     void Update()
     {
-        transform.Rotate(new Vector3(0, 0, 5) * Time.deltaTime);
+        transform.Rotate(new Vector3(0, 0, RotationSpeed) * Time.deltaTime);
 
-        transform.Translate(Vector2.right * 0.1f);
-         if (transform.position.x == 4)
-         {
-             transform.Translate(Speed, 0, 0 * 0.1f);
-          }
-          if (transform.position.x == -4)
-
-           {
-                transform.Translate(Vector2.right * 0.1f);
-
-        }
+       // transform.Translate(Vector2.right * 0.1f);
 
     }
 }
