@@ -117,7 +117,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4102974223534890, guid: 71df1c795f906dd4c9cb24e5fae471b6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.63
+      value: 2.79
       objectReference: {fileID: 0}
     - target: {fileID: 4102974223534890, guid: 71df1c795f906dd4c9cb24e5fae471b6, type: 2}
       propertyPath: m_LocalPosition.y
@@ -156,6 +156,14 @@ Prefab:
         type: 2}
       propertyPath: RotationSpeed
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179386193476864, guid: 71df1c795f906dd4c9cb24e5fae471b6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179386193476864, guid: 71df1c795f906dd4c9cb24e5fae471b6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71df1c795f906dd4c9cb24e5fae471b6, type: 2}
@@ -390,9 +398,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.030591905, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6682555
+  m_Radius: 0.23
 --- !u!4 &1937729208
 Transform:
   m_ObjectHideFlags: 0
