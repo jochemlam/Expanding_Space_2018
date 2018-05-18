@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-
-    public int ScoreValue = 0;
+    [SerializeField]
+    private float ScoreValue = 0f;
     Text score;
     void Start()
     {
@@ -16,8 +16,8 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScoreValue += 1;
+        ScoreValue += 0.0334f;
 
-        score.text = "Score: " + ScoreValue;
+        score.text = "Score: " + Mathf.Round(ScoreValue);
     }
 }
