@@ -26,7 +26,7 @@ public class DestroyScript : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            spawnStardust.RandomDustSpawn();
+            //spawnStardust.RandomDustSpawn();
             SdScore.addScore(5);
             Destroy(collision.gameObject);
         }
