@@ -11,9 +11,22 @@ public class MainMenu : MonoBehaviour {
 
         public void ChangeScene(string scenename)
         {
-        #pragma warning disable CS0618 // Type or member is obsolete
+
+        if (scenename != "Main")
+        {
+#pragma warning disable CS0618 // Type or member is obsolete
             Application.LoadLevel(scenename);
-        #pragma warning restore CS0618 // Type or member is obsolete
+#pragma warning restore CS0618 // Type or member is obsolete
+        } else
+        {
+#pragma warning disable CS0618 // Type or member is obsolete
+            Application.LoadLevel("Main");
+#pragma warning restore CS0618 // Type or member is obsolete
         }
+
+      }
+
+
+   
     
 }

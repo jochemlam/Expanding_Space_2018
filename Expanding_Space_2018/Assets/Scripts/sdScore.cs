@@ -14,7 +14,7 @@ public class SdScore : MonoBehaviour {
         
     }
 
-    void addScore()
+    public static void addScore()
     {
         ScoreScript.ScoreValue += 5;
     }

@@ -8,7 +8,7 @@ public class spawnStardust : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            addScore();
+            SdScore.addScore();
             Destroy(this.gameObject);
         }
 
