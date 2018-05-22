@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class DestroyScript : MonoBehaviour {
     public Rigidbody2D bullet;
-    new GameObject camera;
+    public GameObject camera;
+
+    
     
 
     void Start () {
