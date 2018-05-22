@@ -138,7 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e161e9167b69f44a9c4e08bbb2ecb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 50136741371037932}
+  camera: {fileID: 0}
 --- !u!212 &212360178418986870
 SpriteRenderer:
   m_ObjectHideFlags: 1
