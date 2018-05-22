@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 61618728392689912}
   - component: {fileID: 114012421188381216}
   m_Layer: 0
-  m_Name: Sterrenstof
+  m_Name: Stardust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
