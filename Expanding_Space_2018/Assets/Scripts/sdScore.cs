@@ -8,14 +8,14 @@ public class SdScore : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            addScore();
+            addScore(5);
             Destroy(this.gameObject);
         }
         
     }
 
-    public static void addScore()
+    public static void addScore(int Amount)
     {
-        ScoreScript.ScoreValue += 5;
+        ScoreScript.ScoreValue += Amount;
     }
 }

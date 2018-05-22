@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyScript : MonoBehaviour {
     public Rigidbody2D bullet;
     new GameObject camera;
+    
 
     void Start () {
         bullet = GetComponent<Rigidbody2D>();
@@ -21,8 +22,15 @@ public class DestroyScript : MonoBehaviour {
         }
     }
 
-    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            spawnStardust.RandomDustSpawn();
+            SdScore.addScore(5);
+            Destroy(collision.gameObject);
+        }
 
-
+    }
 
 }
