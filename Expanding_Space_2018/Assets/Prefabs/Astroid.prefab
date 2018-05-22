@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 50535610901651882}
   - component: {fileID: 114193944073215166}
   - component: {fileID: 68790221536036012}
+  - component: {fileID: 114327677727097856}
   m_Layer: 0
   m_Name: Astroid
   m_TagString: Untagged
@@ -87,7 +88,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -136,6 +137,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 15
+--- !u!114 &114327677727097856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1395914353024564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c907d3c27762755448f6348f6da5c3d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stardust: {fileID: 1178639693705384, guid: 3cd4d6c924d89384586bdc07aba95d7c, type: 2}
 --- !u!212 &212706982263072376
 SpriteRenderer:
   m_ObjectHideFlags: 1

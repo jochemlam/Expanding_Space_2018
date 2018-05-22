@@ -20,6 +20,7 @@ public class MainMenu : MonoBehaviour {
         } else
         {
 #pragma warning disable CS0618 // Type or member is obsolete
+            KillPlayer.PlayerDead = false;
             Application.LoadLevel("Main");
 #pragma warning restore CS0618 // Type or member is obsolete
         }
