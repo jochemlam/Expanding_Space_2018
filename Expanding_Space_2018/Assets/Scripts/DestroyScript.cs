@@ -6,13 +6,14 @@ public class DestroyScript : MonoBehaviour {
     public Rigidbody2D bullet;
     public GameObject camera;
 
-    
+    private StardustSpawner stardustSpawner;
     
 
     void Start () {
         bullet = GetComponent<Rigidbody2D>();
         camera = GameObject.FindGameObjectWithTag("MainCamera");
 
+        stardustSpawner = GameObject.FindObjectOfType<StardustSpawner>();
     }
 
     void Update()
@@ -28,7 +29,8 @@ public class DestroyScript : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            //spawnStardust.RandomDustSpawn();
+
+            stardustSpawner.RandomDustSpawn();
             SdScore.addScore(5);
             Destroy(collision.gameObject);
         }

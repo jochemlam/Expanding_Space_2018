@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawnStardust : MonoBehaviour {
+public class StardustSpawner : MonoBehaviour {
 
     public GameObject Stardust;
-    private int minInt = 1;
-    private int maxInt = 10;
+    public int minInt = 1;
+    public int maxInt = 10;
 
     
 
