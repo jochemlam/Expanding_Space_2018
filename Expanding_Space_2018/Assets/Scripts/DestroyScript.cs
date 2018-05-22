@@ -27,12 +27,13 @@ public class DestroyScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.name == "Astroid")
         {
-
+            
             stardustSpawner.RandomDustSpawn();
             SdScore.addScore(5);
             Destroy(collision.gameObject);
+            Destroy(this.gameObject);
         }
 
     }

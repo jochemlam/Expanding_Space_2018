@@ -9,8 +9,14 @@ public class PlayerShoot : MonoBehaviour
     private float bulletSpeed = 10f;
     [SerializeField]
     private Rigidbody2D bullet;
+    //private GameObject Player;
 
     private float Delay;
+
+    private void Start()
+    {
+        //Physics.IgnoreCollision(bullet.GetComponent<Collider>(), Player.GetComponent<Collider>());
+    }
 
     //fire the bullet
     void Fire()
