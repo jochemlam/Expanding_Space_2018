@@ -8,6 +8,6 @@ public class MoveWorld : MonoBehaviour {
 	
 	
 	void Update () {
-		
-	}
+        transform.Translate(WorldSpeed, 0, Time.deltaTime);
+    }
 }

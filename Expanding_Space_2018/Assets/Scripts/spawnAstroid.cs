@@ -27,7 +27,7 @@ public class spawnAstroid : MonoBehaviour {
     private void SpawnMeteor()
     {
 
-        Vector3 spawnPosition = new Vector3(camera.transform.position.x + 5f, Random.Range(-4.5f, 4.5f), 0);
+        Vector3 spawnPosition = new Vector3(camera.transform.position.x + 5f, Random.Range(-4.5f, 4.5f), 1);
         Instantiate(Astroid, spawnPosition, Quaternion.identity);
 
         spawntimer = 0;
