@@ -8,8 +8,8 @@ public class StardustSpawner : MonoBehaviour {
     public int minInt = 1;
     public int maxInt = 10;
 
-    
 
+    // spawn dust function
     public void RandomDustSpawn()
     {
         if (Random.Range(minInt, maxInt) < 2)

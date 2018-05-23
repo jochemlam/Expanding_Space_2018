@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stardust: {fileID: 1178639693705384, guid: 3cd4d6c924d89384586bdc07aba95d7c, type: 2}
+  minInt: 1
+  maxInt: 10
 --- !u!212 &212706982263072376
 SpriteRenderer:
   m_ObjectHideFlags: 1

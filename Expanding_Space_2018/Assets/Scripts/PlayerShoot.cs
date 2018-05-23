@@ -13,10 +13,6 @@ public class PlayerShoot : MonoBehaviour
 
     private float Delay;
 
-    private void Start()
-    {
-        //Physics.IgnoreCollision(bullet.GetComponent<Collider>(), Player.GetComponent<Collider>());
-    }
 
     //fire the bullet
     void Fire()
@@ -25,11 +21,12 @@ public class PlayerShoot : MonoBehaviour
         Vector3 bulletpos = (transform.position + new Vector3(2f, 0, 0));
 
         Rigidbody2D bulletClone = (Rigidbody2D)Instantiate(bullet, bulletpos, transform.rotation);
+        Physics2D.IgnoreCollision(bulletClone.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         bulletClone.velocity = transform.right * bulletSpeed;
         Delay = 0.25f;
     }
 
-    // Update is called once per frame
+    // Setup delay between bullets
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && Delay == 0f)
