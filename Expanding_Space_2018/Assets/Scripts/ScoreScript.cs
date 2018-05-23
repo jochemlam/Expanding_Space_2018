@@ -7,16 +7,19 @@ public class ScoreScript : MonoBehaviour
 {
     
     public static float ScoreValue = 0f;
+    public static float scoreAmount;
     Text score;
     void Start()
     {
         score = GetComponent<Text>();
+        scoreAmount = 0.334f;
     }
 
   
     void Update()
     {
-        ScoreValue += 0.0334f;
+        
+        ScoreValue += scoreAmount;
 
         score.text = "Score: " + Mathf.Round(ScoreValue);
     }

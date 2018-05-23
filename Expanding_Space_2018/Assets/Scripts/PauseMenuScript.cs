@@ -28,6 +28,7 @@ public class PauseMenuScript : MonoBehaviour {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        ScoreScript.scoreAmount = 0.334f;
     }
 
     void Pause()
@@ -35,6 +36,7 @@ public class PauseMenuScript : MonoBehaviour {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        ScoreScript.scoreAmount = 0;
     }
 
     public void Loadmenu()
