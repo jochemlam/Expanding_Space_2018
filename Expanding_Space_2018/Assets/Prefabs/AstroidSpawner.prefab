@@ -37,6 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4005030953565434}
+  - component: {fileID: 114131603919247670}
   m_Layer: 0
   m_Name: AstroidSpawner
   m_TagString: Untagged
@@ -124,3 +125,16 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114131603919247670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1469427459519070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad4e4ec60eabc8141a92b945bb4cc84f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Astroid: {fileID: 1395914353024564, guid: 71df1c795f906dd4c9cb24e5fae471b6, type: 2}
+  spawnTreshold: 1
