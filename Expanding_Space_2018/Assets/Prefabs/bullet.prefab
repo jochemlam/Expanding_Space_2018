@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 50136741371037932}
   - component: {fileID: 114962019879252194}
   - component: {fileID: 61019102462299908}
+  - component: {fileID: 114733740175943376}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Bullet
@@ -91,7 +92,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 0
 --- !u!61 &61019102462299908
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -117,6 +118,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9023721, y: 0.14704132}
   m_EdgeRadius: 0
+--- !u!114 &114733740175943376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367200639576194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856a6dbb9ffeb6349aeeebe418171a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planet: []
+  gravity: 80
+  range: 12
 --- !u!114 &114962019879252194
 MonoBehaviour:
   m_ObjectHideFlags: 1
