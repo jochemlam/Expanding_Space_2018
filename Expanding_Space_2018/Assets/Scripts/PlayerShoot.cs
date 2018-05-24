@@ -13,7 +13,6 @@ public class PlayerShoot : MonoBehaviour
 
     private float Delay;
 
-
     //fire the bullet
     void Fire()
     {

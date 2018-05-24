@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: 30683a80ab07af742adc1a10a0c520d1
-timeCreated: 1526463483
+timeCreated: 1527160589
 licenseType: Free
 MonoImporter:
-  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Stardust: {fileID: 1178639693705384, guid: 3cd4d6c924d89384586bdc07aba95d7c, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

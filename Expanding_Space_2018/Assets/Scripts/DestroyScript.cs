@@ -5,39 +5,26 @@ using UnityEngine;
 public class DestroyScript : MonoBehaviour {
     public Rigidbody2D bullet;
     new GameObject camera;
-
-    private StardustSpawner stardustSpawner;
     
     // Find all necessary objects
     void Start () {
         bullet = GetComponent<Rigidbody2D>();
         camera = GameObject.FindGameObjectWithTag("MainCamera");
-
-        stardustSpawner = GameObject.FindObjectOfType<StardustSpawner>();
     }
 
     // delete bullets out of screen
     void Update()
     {
-        float maxRange = camera.transform.position.x + 8.5f;
-        if (bullet.transform.position.x >= maxRange)
+        float maxRangex = camera.transform.position.x + 8.5f;
+        float minRangex = camera.transform.position.x - 8.5f;
+        float maxRangey = camera.transform.position.y + 6.5f;
+        float minRangey = camera.transform.position.y - 6.5f;
+
+
+        if (bullet.transform.position.x >= maxRangex || bullet.transform.position.x <= minRangex 
+            || bullet.transform.position.y >= maxRangey || bullet.transform.position.y <= minRangey)
         {
             Destroy(this.gameObject);
         }
     }
-
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.name == "Astroid")
-        {
-            
-            stardustSpawner.RandomDustSpawn();
-            SdScore.addScore(5);
-            Destroy(other.gameObject);
-            Destroy(this.gameObject);
-        }
-
-    }
-
 }
