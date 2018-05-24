@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: []
-  gravity: 80
+  gravity: 220
   range: 12
 --- !u!114 &114962019879252194
 MonoBehaviour:
