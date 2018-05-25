@@ -56,6 +56,11 @@ public class AstroidMovement : MonoBehaviour
             AstroidHP -= 1;
             Destroy(other.gameObject);
         }
+        if (other.gameObject.tag == "Player")
+        {
+            KillPlayer.PlayerDead = true;
+            Destroy(other.gameObject);
+        }
 
     }
     public void RandomDustSpawn()

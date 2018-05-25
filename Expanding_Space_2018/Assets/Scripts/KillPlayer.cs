@@ -1,16 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KillPlayer : MonoBehaviour {
 
-    public static bool PlayerDead;
+    public static bool PlayerDead = false;
 
-    void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        Debug.Log("trigger");
-        Destroy(this.gameObject);
+        
+        if (PlayerDead == true)
+        {
 
-        PlayerDead = true;
-	}
-}
+#pragma warning disable CS0618 // Type or member is obsolete
+            SceneManager.UnloadScene("Main");
+#pragma warning restore CS0618 // Type or member is obsolete
+
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+        }
+    }
+    
+ }
