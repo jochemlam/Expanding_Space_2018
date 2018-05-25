@@ -18,8 +18,12 @@ public class AstroidMovement : MonoBehaviour
     public GameObject Stardust;
     public int minInt = 1;
     public int maxInt = 10;
-    private object astroid;
-    
+
+    void Start()
+    {
+        Astroid = GetComponent<Rigidbody2D>();
+        camera = GameObject.FindGameObjectWithTag("MainCamera");
+    }
 
 
     void Update()
@@ -38,7 +42,7 @@ public class AstroidMovement : MonoBehaviour
         // delete astroids
         float minRangexAstroid = camera.transform.position.x - 8.5f;
 
-        if (this.gameObject.transform.position.x <= minRangexAstroid + -8.5f)
+        if (this.gameObject.transform.position.x <= minRangexAstroid)
         {
             Destroy(this.gameObject);
         }

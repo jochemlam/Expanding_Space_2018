@@ -22,13 +22,13 @@ public class PlayerShoot : MonoBehaviour
         Rigidbody2D bulletClone = (Rigidbody2D)Instantiate(bullet, bulletpos, transform.rotation);
         Physics2D.IgnoreCollision(bulletClone.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         bulletClone.velocity = transform.right * bulletSpeed;
-        Delay = 0.25f;
+        Delay = 0.5f;
     }
 
     // Setup delay between bullets
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && Delay == 0f)
+        if (Input.GetKey(KeyCode.Space) && Delay == 0f)
         {
 
             Fire();

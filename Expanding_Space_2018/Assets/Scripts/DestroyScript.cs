@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyScript : MonoBehaviour {
     public Rigidbody2D bullet;
+    public Rigidbody2D Astroid;
     new GameObject camera;
     
     // Find all necessary objects

@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class SdScore : MonoBehaviour {
 
+    private AudioSource pickupSD;
+
+    private void Start()
+    {
+        pickupSD = GetComponent<AudioSource>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            addScore(5);
+            pickupSD.Play();
+            addScore(30);
             Destroy(this.gameObject);
         }
         

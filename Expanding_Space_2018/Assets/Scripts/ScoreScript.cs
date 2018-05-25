@@ -12,7 +12,7 @@ public class ScoreScript : MonoBehaviour
     void Start()
     {
         score = GetComponent<Text>();
-        scoreAmount = 0.334f;
+        scoreAmount = 0.0334f;
     }
 
   

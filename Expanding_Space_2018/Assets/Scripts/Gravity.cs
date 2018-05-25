@@ -8,7 +8,6 @@ public class Gravity : MonoBehaviour
     //makes the variables and arrays it for multiple object use
     public GameObject[] planet;
     public float gravity = 30f;
-    private bool grounded = true;
     [SerializeField]
     private float range = 9;
 
@@ -37,11 +36,6 @@ public class Gravity : MonoBehaviour
             {
                 //transform.up = -offset;
                 rig2d.AddForce(gravity * offset.normalized / gravitysqr);
-                grounded = true;
-            }
-            else if (gravitysqr > 9)
-            {
-                grounded = false;
             }
 
         }
