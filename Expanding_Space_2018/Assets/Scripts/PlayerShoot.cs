@@ -11,6 +11,7 @@ public class PlayerShoot : MonoBehaviour
     private Rigidbody2D bullet;
     //private GameObject Player;
 
+        [SerializeField]
     private float Delay;
 
     //fire the bullet
