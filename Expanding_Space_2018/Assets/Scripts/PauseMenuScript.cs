@@ -47,7 +47,13 @@ public class PauseMenuScript : MonoBehaviour {
 
     public void QuitGame()
     {
-        Application.Quit();
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #elif UNITY_WEBPLAYER
+                         Application.OpenURL(webplayerQuitURL);
+        #else
+                         Application.Quit();
+        #endif
         Debug.Log("Quit Game");
     }
 }

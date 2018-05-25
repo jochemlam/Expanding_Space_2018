@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
         
@@ -19,10 +20,10 @@ public class MainMenu : MonoBehaviour {
         {
 
         if (scenename == "Main")
-        {
-#pragma warning disable CS0618 // Type or member is obsolete
-            Application.LoadLevel("Main");
-#pragma warning restore CS0618 // Type or member is obsolete
+        { 
+            SceneManager.LoadScene("Main", LoadSceneMode.Single);
+            SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
+
             KillPlayer.PlayerDead = false;
             ScoreScript.ScoreValue = 0;
 
