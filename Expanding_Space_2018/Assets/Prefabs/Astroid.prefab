@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4102974223534890}
   - component: {fileID: 50535610901651882}
   - component: {fileID: 114193944073215166}
-  - component: {fileID: 68790221536036012}
+  - component: {fileID: 58931574958523270}
   m_Layer: 0
   m_Name: Astroid
   m_TagString: Untagged
@@ -92,8 +92,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 3
---- !u!68 &68790221536036012
-EdgeCollider2D:
+--- !u!58 &58931574958523270
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -104,26 +104,9 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.70264935, y: 0.000000037252903}
-  - {x: 0.620528, y: 0.30710527}
-  - {x: 0.2272017, y: 0.4819363}
-  - {x: -0.15926003, y: 0.53947675}
-  - {x: -0.47293115, y: 0.45242563}
-  - {x: -0.6254926, y: 0.12459458}
-  - {x: -0.7879162, y: -0.026739292}
-  - {x: -0.78985715, y: -0.3150703}
-  - {x: -0.5158248, y: -0.6618237}
-  - {x: -0.3420925, y: -0.6905894}
-  - {x: -0.13857245, y: -0.5970646}
-  - {x: 0.11755347, y: -0.68162215}
-  - {x: 0.30911303, y: -0.44477102}
-  - {x: 0.16507053, y: -0.18968955}
-  - {x: 0.39730048, y: -0.10191091}
-  - {x: 0.64749956, y: -0.27780035}
-  - {x: 0.7026937, y: 0}
+  m_Offset: {x: -0.00999999, y: -0.11}
+  serializedVersion: 2
+  m_Radius: 0.70103663
 --- !u!114 &114193944073215166
 MonoBehaviour:
   m_ObjectHideFlags: 1

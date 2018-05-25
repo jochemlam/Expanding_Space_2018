@@ -5,18 +5,22 @@ using UnityEngine;
 public class AstroidMovement : MonoBehaviour
 {
 
+    // Destroy astroid vars
+    new GameObject camera;
+    public Rigidbody2D Astroid;
+
+    // astroid vars
     [SerializeField]
     private float RotationSpeed = 50f;
     public int AstroidHP = 3;
-    //private StardustSpawner stardustSpawner;
+    
+    // stardust vars
     public GameObject Stardust;
     public int minInt = 1;
     public int maxInt = 10;
+    private object astroid;
+    
 
-    private void Start()
-    {
-        //stardustSpawner = GameObject.FindObjectOfType<StardustSpawner>();
-    }
 
     void Update()
     {
@@ -29,6 +33,14 @@ public class AstroidMovement : MonoBehaviour
             RandomDustSpawn();
             SdScore.addScore(5);
             AstroidHP = 3;
+        }
+
+        // delete astroids
+        float minRangexAstroid = camera.transform.position.x - 8.5f;
+
+        if (this.gameObject.transform.position.x <= minRangexAstroid + -8.5f)
+        {
+            Destroy(this.gameObject);
         }
     }
 
@@ -43,6 +55,7 @@ public class AstroidMovement : MonoBehaviour
 
     }
     public void RandomDustSpawn()
+        // spawn random dust 1 in 10 chance
     {
         if (Random.Range(minInt, maxInt) < 2)
         {
