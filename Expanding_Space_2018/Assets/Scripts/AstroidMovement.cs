@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AstroidMovement : MonoBehaviour
 {
@@ -28,8 +29,9 @@ public class AstroidMovement : MonoBehaviour
 
     void Update()
     {
+        if (PauseMenuScript.GameIsPaused == false) { 
         transform.Rotate(new Vector3(0, 0, RotationSpeed) * Time.deltaTime);
-
+}
         // on 0 hp
         if (AstroidHP <= 0)
         {
@@ -56,10 +58,13 @@ public class AstroidMovement : MonoBehaviour
             AstroidHP -= 1;
             Destroy(other.gameObject);
         }
+
+        // kill player
         if (other.gameObject.tag == "Player")
         {
-            KillPlayer.PlayerDead = true;
             Destroy(other.gameObject);
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            SceneManager.UnloadSceneAsync("Main");
         }
 
     }

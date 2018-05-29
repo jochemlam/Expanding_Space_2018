@@ -28,10 +28,10 @@ public class PauseMenuScript : MonoBehaviour {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        ScoreScript.scoreAmount = 0.334f;
+        ScoreScript.scoreAmount = 0.0334f;
     }
 
-    void Pause()
+    public void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
