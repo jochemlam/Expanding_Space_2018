@@ -18,7 +18,7 @@ public class spawnAstroid : MonoBehaviour {
     void Update()
     {
         spawntimer += Time.deltaTime;
-        if (spawntimer >= spawnDelay)
+        if (spawntimer >= spawnDelay && PauseMenuScript.GameIsPaused == false)
         {
             SpawnMeteor();
         }

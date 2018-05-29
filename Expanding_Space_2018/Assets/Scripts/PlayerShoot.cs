@@ -29,7 +29,8 @@ public class PlayerShoot : MonoBehaviour
     // Setup delay between bullets
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space) && Delay == 0f)
+        if (Input.GetKey(KeyCode.Space) && Delay == 0f 
+            && PauseMenuScript.GameIsPaused == false)
         {
 
             Fire();

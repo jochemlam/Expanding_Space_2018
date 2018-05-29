@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class MoveWorld : MonoBehaviour {
 
-    public float WorldSpeed = 3.5f;
+    public float WorldSpeed = 0.03f;
 
     void Update () {
-        
 
         // move the damn world
-        transform.Translate(WorldSpeed, 0, 0 * Time.deltaTime);
+        if (PauseMenuScript.GameIsPaused == false)
+        {
+            transform.Translate(WorldSpeed, 0, 0 * Time.deltaTime);
+        }
     }
 }
