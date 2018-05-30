@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveWorld : MonoBehaviour {
 
     public float WorldSpeed = 0.013f;
-    private float WorldSpeedIncrease = 0.00003f;
+    private float WorldSpeedIncrease = 0.00001f;
 
     void Update () {
 

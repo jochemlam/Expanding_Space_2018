@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class AstroidMovement : MonoBehaviour
 {
+    public AudioClip ShootSoundClip;
+
+    public AudioSource SoundManager;
 
     // Destroy astroid vars
     new GameObject camera;
@@ -21,6 +24,7 @@ public class AstroidMovement : MonoBehaviour
 
     void Start()
     {
+        SoundManager.clip = ShootSoundClip;
         Astroid = GetComponent<Rigidbody2D>();
         camera = GameObject.FindGameObjectWithTag("MainCamera");
     }
@@ -34,7 +38,8 @@ public class AstroidMovement : MonoBehaviour
         // on 0 hp
         if (AstroidHP <= 0)
         {
-            
+
+            SoundManager.Play();
             Destroy(this.gameObject);
             RandomDustSpawn();
             SdScore.addScore(5);
