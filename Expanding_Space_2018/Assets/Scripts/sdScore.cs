@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class SdScore : MonoBehaviour {
 
+    [SerializeField]
+    private int scoreWorth = 30;
+
+    private Rigidbody2D bullet;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            addScore(30);
+            addScore(scoreWorth);
             Destroy(this.gameObject);
         }
         

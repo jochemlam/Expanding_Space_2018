@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4902410442716340}
   - component: {fileID: 212360178418986870}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114962019879252194}
   - component: {fileID: 61019102462299908}
   - component: {fileID: 114733740175943376}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}

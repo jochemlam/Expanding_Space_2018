@@ -42,7 +42,7 @@ public class AstroidMovement : MonoBehaviour
         }
 
         // delete astroids
-        float minRangexAstroid = camera.transform.position.x - 8.5f;
+        float minRangexAstroid = camera.transform.position.x - 10f;
 
         if (this.gameObject.transform.position.x <= minRangexAstroid)
         {

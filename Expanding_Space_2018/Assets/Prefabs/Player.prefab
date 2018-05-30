@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114249461450352570}
   - component: {fileID: 114692909130892666}
   - component: {fileID: 60568334382709856}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4078414271398950}
   - component: {fileID: 212666688277562022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Vehicle Final Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 10
   bullet: {fileID: 50136741371037932, guid: b230672092f9e69499a3c5b9b7d3e1e4, type: 2}
+  Delay: 0
 --- !u!114 &114567967641255772
 MonoBehaviour:
   m_ObjectHideFlags: 1
