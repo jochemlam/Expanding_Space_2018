@@ -34,6 +34,7 @@ public class AstroidMovement : MonoBehaviour
         // on 0 hp
         if (AstroidHP <= 0)
         {
+            
             Destroy(this.gameObject);
             RandomDustSpawn();
             SdScore.addScore(5);
