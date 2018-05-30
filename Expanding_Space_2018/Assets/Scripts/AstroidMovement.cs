@@ -19,6 +19,9 @@ public class AstroidMovement : MonoBehaviour
     public GameObject Stardust;
     public int maxInt = 10;
 
+    // destroy animation
+    //Animator Explosion;
+
     void Start()
     {
         Astroid = GetComponent<Rigidbody2D>();
@@ -34,7 +37,7 @@ public class AstroidMovement : MonoBehaviour
         // on 0 hp
         if (AstroidHP <= 0)
         {
-            
+            //Explosion.Play("Explosion");
             Destroy(this.gameObject);
             RandomDustSpawn();
             SdScore.addScore(5);
