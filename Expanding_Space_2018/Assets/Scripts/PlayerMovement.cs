@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour {
         //left movement
         if (Input.GetKey("a") && PauseMenuScript.GameIsPaused == false)
         {
-            transform.Translate((Vector2.left * (speed / 2)) * Time.deltaTime);
+            transform.Translate((Vector2.left * (speed / 1.5f)) * Time.deltaTime);
         }
         //right movement
         if (Input.GetKey("d") && PauseMenuScript.GameIsPaused == false)

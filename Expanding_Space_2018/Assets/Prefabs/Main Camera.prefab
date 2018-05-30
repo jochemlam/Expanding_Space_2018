@@ -361,6 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 10
   bullet: {fileID: 50136741371037932, guid: b230672092f9e69499a3c5b9b7d3e1e4, type: 2}
+  Delay: 0
 --- !u!114 &114575603878823450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -383,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d050ccb38e26d6b49988531d97289d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WorldSpeed: 0.013
+  WorldSpeed: 1
 --- !u!114 &114784888054972940
 MonoBehaviour:
   m_ObjectHideFlags: 1

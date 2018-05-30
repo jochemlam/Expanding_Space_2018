@@ -9,7 +9,7 @@ public class Gravity : MonoBehaviour
     public GameObject[] planet;
     public float gravity = 30f;
     [SerializeField]
-    private float range = 9;
+    private float range = 10;
 
     private Rigidbody2D rig2d;
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SdScore : MonoBehaviour {
 
     [SerializeField]
-    private int scoreWorth = 30;
+    private int scoreWorth = 5;
 
     private Rigidbody2D bullet;
 

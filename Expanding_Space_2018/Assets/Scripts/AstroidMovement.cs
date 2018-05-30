@@ -17,7 +17,6 @@ public class AstroidMovement : MonoBehaviour
     
     // stardust vars
     public GameObject Stardust;
-    public int minInt = 1;
     public int maxInt = 10;
 
     void Start()
@@ -71,7 +70,7 @@ public class AstroidMovement : MonoBehaviour
     public void RandomDustSpawn()
         // spawn random dust 1 in 10 chance
     {
-        if (Random.Range(minInt, maxInt) < 2)
+        if (Random.Range(1, maxInt) < 2)
         {
             Instantiate(Stardust, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         }

@@ -9,9 +9,12 @@ public class PlayerShoot : MonoBehaviour
     private float bulletSpeed = 10f;
     [SerializeField]
     private Rigidbody2D bullet;
-    
+    [SerializeField]
+    private float BulletDelay = 0.5f;
 
-        [SerializeField]
+
+
+    [SerializeField]
     private float Delay;
 
     //fire the bullet
@@ -21,13 +24,17 @@ public class PlayerShoot : MonoBehaviour
         Vector3 bulletpos = (transform.position + new Vector3(2f, 0, 0));
 
         Rigidbody2D bulletClone = (Rigidbody2D)Instantiate(bullet, bulletpos, transform.rotation);
+        Physics2D.IgnoreCollision(bulletClone.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         bulletClone.velocity = transform.right * bulletSpeed;
-        Delay = 0.5f;
+        Delay = BulletDelay;
     }
 
     // Setup delay between bullets
     void Update()
     {
+        bulletSpeed += 0.00003f;
+        BulletDelay += 0.00001f;
+
         if (Input.GetKey(KeyCode.Space) && Delay == 0f 
             && PauseMenuScript.GameIsPaused == false)
         {
