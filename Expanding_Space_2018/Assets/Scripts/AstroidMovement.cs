@@ -9,7 +9,7 @@ public class AstroidMovement : MonoBehaviour
 
     public AudioSource SoundManager;
 
-    public static Animation anim;
+    //public static Animation anim;
 
     // Destroy astroid vars
     new GameObject camera;
@@ -29,7 +29,7 @@ public class AstroidMovement : MonoBehaviour
         SoundManager.clip = ShootSoundClip;
         Astroid = GetComponent<Rigidbody2D>();
         camera = GameObject.FindGameObjectWithTag("MainCamera");
-        anim = GetComponent<Animation>();
+        //anim = GetComponent<Animation>();
     }
 
 
@@ -43,8 +43,8 @@ public class AstroidMovement : MonoBehaviour
         {
 
             SoundManager.Play();
-            anim.Play("Explosion1");
-            Invoke("DestroyAstroidNow", 0.5f);
+            //anim.Play("Explosion1");
+            Invoke("DestroyAstroidNow", 0.612f);
             RandomDustSpawn();
             SdScore.addScore(5);
             AstroidHP = 3;
