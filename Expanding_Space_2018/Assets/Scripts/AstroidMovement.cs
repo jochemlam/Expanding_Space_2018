@@ -24,6 +24,7 @@ public class AstroidMovement : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine("waitOneSecond");
         SoundManager.clip = ShootSoundClip;
         Astroid = GetComponent<Rigidbody2D>();
         camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -40,6 +41,11 @@ public class AstroidMovement : MonoBehaviour
         {
 
             SoundManager.Play();
+            //IEnumerator waitOneSecond()
+          //  {
+            //    yield return new WaitForSeconds(1);
+            //    print("waited one second");
+            //}
             Destroy(this.gameObject);
             RandomDustSpawn();
             SdScore.addScore(5);
