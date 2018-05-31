@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 58931574958523270}
   - component: {fileID: 95354066041743614}
   - component: {fileID: 82466147735321828}
+  - component: {fileID: 111196672080039284}
   m_Layer: 0
   m_Name: Astroid
   m_TagString: Untagged
@@ -115,7 +116,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1395914353024564}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -196,7 +197,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1395914353024564}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3cd3713758990fe498370a0912869914, type: 2}
   m_CullingMode: 0
@@ -206,6 +207,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &111196672080039284
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1395914353024564}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b8c26e2bc6ba9fd46aea2230dc6b957f, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114193944073215166
 MonoBehaviour:
   m_ObjectHideFlags: 1

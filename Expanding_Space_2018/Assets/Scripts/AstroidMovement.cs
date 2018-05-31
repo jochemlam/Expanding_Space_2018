@@ -9,6 +9,8 @@ public class AstroidMovement : MonoBehaviour
 
     public AudioSource SoundManager;
 
+    public static Animation anim;
+
     // Destroy astroid vars
     new GameObject camera;
     public Rigidbody2D Astroid;
@@ -24,10 +26,10 @@ public class AstroidMovement : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine("waitOneSecond");
         SoundManager.clip = ShootSoundClip;
         Astroid = GetComponent<Rigidbody2D>();
         camera = GameObject.FindGameObjectWithTag("MainCamera");
+        anim = GetComponent<Animation>();
     }
 
 
@@ -41,12 +43,8 @@ public class AstroidMovement : MonoBehaviour
         {
 
             SoundManager.Play();
-            //IEnumerator waitOneSecond()
-          //  {
-            //    yield return new WaitForSeconds(1);
-            //    print("waited one second");
-            //}
-            Destroy(this.gameObject);
+            anim.Play("Explosion1");
+            Invoke("DestroyAstroidNow", 0.5f);
             RandomDustSpawn();
             SdScore.addScore(5);
             AstroidHP = 3;
@@ -57,7 +55,7 @@ public class AstroidMovement : MonoBehaviour
 
         if (this.gameObject.transform.position.x <= minRangexAstroid)
         {
-            Destroy(this.gameObject);
+            DestroyAstroidNow();
         }
     }
 
@@ -86,6 +84,11 @@ public class AstroidMovement : MonoBehaviour
         {
             Instantiate(Stardust, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         }
+    }
+
+    private void DestroyAstroidNow()
+    {
+        Destroy(this.gameObject);
     }
 }
 
