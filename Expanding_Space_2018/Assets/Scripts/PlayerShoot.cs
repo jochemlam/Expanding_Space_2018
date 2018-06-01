@@ -12,25 +12,16 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     private float BulletDelay = 0.5f;
 
-    public AudioClip ShootSoundClip;
 
-    public AudioSource SoundManager;
 
     [SerializeField]
     private float Delay;
-
-    private void Start()
-    {
-        SoundManager.clip = ShootSoundClip;
-    }
 
     //fire the bullet
     void Fire()
     {
         
         Vector3 bulletpos = (transform.position + new Vector3(2f, 0, 0));
-
-        SoundManager.Play();
 
         Rigidbody2D bulletClone = (Rigidbody2D)Instantiate(bullet, bulletpos, transform.rotation);
         Physics2D.IgnoreCollision(bulletClone.GetComponent<Collider2D>(), GetComponent<Collider2D>());

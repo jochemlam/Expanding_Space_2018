@@ -5,11 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class AstroidMovement : MonoBehaviour
 {
-    public AudioClip ShootSoundClip;
-
-    public AudioSource SoundManager;
-
-    //public static Animation anim;
 
     // Destroy astroid vars
     new GameObject camera;
@@ -26,10 +21,9 @@ public class AstroidMovement : MonoBehaviour
 
     void Start()
     {
-        SoundManager.clip = ShootSoundClip;
         Astroid = GetComponent<Rigidbody2D>();
         camera = GameObject.FindGameObjectWithTag("MainCamera");
-        //anim = GetComponent<Animation>();
+        //Stardust = GameObject.FindGameObjectWithTag("StarDust");
     }
 
 
@@ -41,12 +35,9 @@ public class AstroidMovement : MonoBehaviour
         // on 0 hp
         if (AstroidHP <= 0)
         {
-
-            SoundManager.Play();
-            //anim.Play("Explosion1");
-            Invoke("DestroyAstroidNow", 0.612f);
+            Destroy(this.gameObject);
             RandomDustSpawn();
-            SdScore.addScore(5);
+            SdScore.addScore(3);
             AstroidHP = 3;
         }
 
@@ -55,7 +46,7 @@ public class AstroidMovement : MonoBehaviour
 
         if (this.gameObject.transform.position.x <= minRangexAstroid)
         {
-            DestroyAstroidNow();
+            Destroy(this.gameObject);
         }
     }
 
@@ -84,11 +75,6 @@ public class AstroidMovement : MonoBehaviour
         {
             Instantiate(Stardust, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         }
-    }
-
-    private void DestroyAstroidNow()
-    {
-        Destroy(this.gameObject);
     }
 }
 
