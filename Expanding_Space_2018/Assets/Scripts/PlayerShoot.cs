@@ -5,17 +5,28 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
 
+
     [SerializeField]
     private float bulletSpeed = 10f;
     [SerializeField]
     private Rigidbody2D bullet;
     [SerializeField]
     private float BulletDelay = 0.5f;
+    [SerializeField]
+    private AudioClip AudioFile;
+    [SerializeField]
+    private AudioSource SoundSource;
+
 
 
 
     [SerializeField]
     private float Delay;
+
+    private void Start()
+    {
+        SoundSource.clip = AudioFile;
+    }
 
     //fire the bullet
     void Fire()
@@ -40,6 +51,7 @@ public class PlayerShoot : MonoBehaviour
         {
 
             Fire();
+            SoundSource.Play();
         }
 
         if (Delay > 0)
