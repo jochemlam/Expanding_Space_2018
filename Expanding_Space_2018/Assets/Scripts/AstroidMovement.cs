@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class AstroidMovement : MonoBehaviour
 {
+    [SerializeField]
+    private AudioClip AudioFile;
+    [SerializeField]
+    private AudioSource SoundSource;
 
     // Destroy astroid vars
     new GameObject camera;
@@ -21,6 +25,7 @@ public class AstroidMovement : MonoBehaviour
 
     void Start()
     {
+        SoundSource.clip = AudioFile;
         Astroid = GetComponent<Rigidbody2D>();
         camera = GameObject.FindGameObjectWithTag("MainCamera");
         //Stardust = GameObject.FindGameObjectWithTag("StarDust");
@@ -39,6 +44,8 @@ public class AstroidMovement : MonoBehaviour
             RandomDustSpawn();
             SdScore.addScore(3);
             AstroidHP = 3;
+            SoundSource.Play();
+
         }
 
         // delete astroids
