@@ -25,7 +25,8 @@ public class SdScore : MonoBehaviour {
         {
             SoundSource.Play();
             addScore(scoreWorth);
-            Destroy(this.gameObject);
+
+            Invoke("Destroythis", 2);
         }
         
     }
@@ -33,5 +34,10 @@ public class SdScore : MonoBehaviour {
     public static void addScore(int Amount)
     {
         ScoreScript.ScoreValue += Amount;
+    }
+
+    void Destroythis()
+    {
+        Destroy(this.gameObject);
     }
 }
