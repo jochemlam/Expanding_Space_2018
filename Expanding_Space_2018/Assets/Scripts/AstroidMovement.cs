@@ -40,13 +40,21 @@ public class AstroidMovement : MonoBehaviour
         // on 0 hp
         if (AstroidHP <= 0)
         {
-            Destroy(this.gameObject);
+            SoundSource.Play();
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
+                       
             RandomDustSpawn();
             SdScore.addScore(3);
             AstroidHP = 3;
-            SoundSource.Play();
 
+            Invoke("DestroyAstroid", 1);
+            
         }
+
+        
+
+
 
         // delete astroids
         float minRangexAstroid = camera.transform.position.x - 10f;
@@ -82,6 +90,10 @@ public class AstroidMovement : MonoBehaviour
         {
             Instantiate(Stardust, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         }
+    }
+    void DestroyAstroid()
+    {
+        Destroy(this.gameObject);
     }
 }
 

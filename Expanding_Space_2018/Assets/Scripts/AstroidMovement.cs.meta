@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: 30683a80ab07af742adc1a10a0c520d1
-timeCreated: 1527160589
+timeCreated: 1528278437
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
+  - AudioFile: {fileID: 8300000, guid: 3d782e200a484a144822c2ba057610fa, type: 3}
+  - SoundSource: {fileID: 82916899018662668, guid: 71df1c795f906dd4c9cb24e5fae471b6,
+      type: 2}
+  - Astroid: {fileID: 50535610901651882, guid: 71df1c795f906dd4c9cb24e5fae471b6, type: 2}
   - Stardust: {fileID: 1178639693705384, guid: 3cd4d6c924d89384586bdc07aba95d7c, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
