@@ -6,7 +6,7 @@ public class SdScore : MonoBehaviour {
 
     [SerializeField]
     private int scoreWorth = 5;
-
+    public float duration = 1f;
     private Rigidbody2D bullet;
     [SerializeField]
     private AudioClip AudioFile;
@@ -18,16 +18,26 @@ public class SdScore : MonoBehaviour {
         SoundSource.clip = AudioFile;
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collision2D other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.name == "Player")
+        {
+            StartCoroutine(OnCollisionEnter2D(other));
+        }
+    }
+
+
+    public IEnumerator OnCollisionEnter2D(Collision2D Player)
+    {
+        if (Player.gameObject.tag == "Player")
         {
             SoundSource.Play();
             addScore(scoreWorth);
 
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
+
+            yield return new WaitForSeconds(duration);
 
             Invoke("Destroythis", 2);
         }

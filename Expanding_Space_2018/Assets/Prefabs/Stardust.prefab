@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4811270844812732}
   - component: {fileID: 50575258688327026}
   - component: {fileID: 61618728392689912}
-  - component: {fileID: 114873465068503136}
+  - component: {fileID: 114125629143472826}
   - component: {fileID: 82072553914860702}
   - component: {fileID: 95127470141547746}
   - component: {fileID: 212328924807553408}
@@ -187,7 +187,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114873465068503136
+--- !u!114 &114125629143472826
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -198,8 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea65a8b261c9aa4390a88af9e4c444a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreWorth: 6
-  AudioFile: {fileID: 8300000, guid: 112abd5831dcbcb47b0fb53ab1381eff, type: 3}
+  scoreWorth: 5
+  duration: 1
+  AudioFile: {fileID: 8300000, guid: e9396936574738a4d8ea5a48ae6d6e62, type: 3}
   SoundSource: {fileID: 82072553914860702}
 --- !u!212 &212328924807553408
 SpriteRenderer:
