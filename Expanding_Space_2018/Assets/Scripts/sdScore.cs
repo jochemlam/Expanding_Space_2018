@@ -26,6 +26,9 @@ public class SdScore : MonoBehaviour {
             SoundSource.Play();
             addScore(scoreWorth);
 
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
+
             Invoke("Destroythis", 2);
         }
         
