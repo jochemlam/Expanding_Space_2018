@@ -5,13 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class KillPlayer : MonoBehaviour {
 
-    public static bool PlayerDead = false;
+    public static bool PlayerDead;
 
+    private void Start()
+    {
+        PlayerDead = false;
+    }
     private void Update()
     {
         
         if (PlayerDead == true)
         {
+            ScoreScript.scoreAmount = 0f;
 
 #pragma warning disable CS0618 // Type or member is obsolete
             SceneManager.UnloadScene("Main");
