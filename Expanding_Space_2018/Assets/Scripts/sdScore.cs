@@ -18,16 +18,16 @@ public class SdScore : MonoBehaviour {
         SoundSource.clip = AudioFile;
     }
 
-    void OnTriggerEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "Player")
         {
-            StartCoroutine(OnCollisionEnter2D(other));
+            StartCoroutine(HandleCollision(other));
         }
     }
 
 
-    public IEnumerator OnCollisionEnter2D(Collision2D Player)
+    public IEnumerator HandleCollision(Collider2D Player)
     {
         if (Player.gameObject.tag == "Player")
         {
