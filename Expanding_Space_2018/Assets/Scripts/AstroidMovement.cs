@@ -13,6 +13,7 @@ public class AstroidMovement : MonoBehaviour
     // Destroy astroid vars
     new GameObject camera;
     public Rigidbody2D Astroid;
+    public GameObject explode;
 
     // astroid vars
     [SerializeField]
@@ -43,14 +44,16 @@ public class AstroidMovement : MonoBehaviour
         if (AstroidHP <= 0)
         {
             SoundSource.Play();
+            Instantiate(explode, transform.position, transform.rotation);
+
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
-                       
+            
             RandomDustSpawn();
             SdScore.addScore(3);
             AstroidHP = 3;
 
-            Invoke("DestroyAstroid", 1);
+            Invoke("DestroyAstroid", 0.667f);
             
         }
 
