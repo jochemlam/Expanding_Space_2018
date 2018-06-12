@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShieldPowerup : MonoBehaviour
 {
 
-    public float duration = 3f;
+    public float duration = 5f;
     public GameObject pickupEffect;
 
     void OnTriggerEnter2D(Collider2D other)

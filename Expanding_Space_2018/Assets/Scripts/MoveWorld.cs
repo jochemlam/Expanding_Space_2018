@@ -7,6 +7,10 @@ public class MoveWorld : MonoBehaviour {
     public static float WorldSpeed = 0.013f;
     private float WorldSpeedIncrease = 0.00003f;
 
+    private void Start()
+    {
+        WorldSpeed = 0.013f;
+    }
     void Update () {
 
         WorldSpeed += WorldSpeedIncrease;
