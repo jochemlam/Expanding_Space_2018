@@ -17,6 +17,7 @@ public class ShieldPowerup : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         shield = GameObject.FindGameObjectWithTag("Shield");
         shield.SetActive(false);
+        player.GetComponent<Collider2D>().enabled = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -43,6 +44,7 @@ public class ShieldPowerup : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
 
         //activate shield
+        player.GetComponent<Collider2D>().enabled = false;
         shield.SetActive(true);
 
         // activate shield here
@@ -51,6 +53,7 @@ public class ShieldPowerup : MonoBehaviour
         yield return new WaitForSeconds(duration);
 
         // deactivate shield here
+        player.GetComponent<Collider2D>().enabled = true;
         shield.SetActive(false);
 
         ShieldPowerup.isinvulnerable = false;

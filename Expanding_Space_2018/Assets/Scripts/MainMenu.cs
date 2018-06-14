@@ -15,6 +15,12 @@ public class MainMenu : MonoBehaviour {
                  Application.Quit();
         #endif
         }
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Space)) {
+            ChangeScene("Main");
+        }
+    }
 
     public void ChangeScene(string scenename)
         {
