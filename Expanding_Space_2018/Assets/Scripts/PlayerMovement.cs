@@ -5,9 +5,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     private float speed = 5;
-	void Update () {
 
+    private void Start()
+    {
+        ShieldPowerup.isinvulnerable = false;
+    }
 
+    void Update () {
 
         //up movement
         if (Input.GetKey("w") && PauseMenuScript.GameIsPaused == false)

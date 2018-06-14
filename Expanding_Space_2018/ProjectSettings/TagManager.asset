@@ -8,6 +8,8 @@ TagManager:
   - StarDust
   - BlackHole
   - Wall
+  - Shield
+  - Astroid
   layers:
   - Default
   - TransparentFX
@@ -20,9 +22,9 @@ TagManager:
   - Player
   - Bullet
   - Stardust
-  - 
-  - 
-  - 
+  - Shield
+  - Astroid
+  - Walls
   - 
   - 
   - 

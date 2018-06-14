@@ -11,6 +11,7 @@ public class spawnAstroid : MonoBehaviour {
 
     private void Start()
     {
+        Astroid = GameObject.FindGameObjectWithTag("Astroid");
         camera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 

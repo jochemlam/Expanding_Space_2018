@@ -19,24 +19,24 @@ public class AstroidMovement : MonoBehaviour
     [SerializeField]
     private float RotationSpeed = 50f;
     public int AstroidHP = 3;
-    public static bool isinvulnerable;
 
     // stardust vars
     public GameObject Stardust;
     public int maxInt = 10;
 
+
     void Start()
     {
-        isinvulnerable = false;
         SoundSource.clip = AudioFile;
         Astroid = GetComponent<Rigidbody2D>();
-        camera = GameObject.FindGameObjectWithTag("MainCamera");
-        //Stardust = GameObject.FindGameObjectWithTag("StarDust");
+        camera = GameObject.FindGameObjectWithTag("MainCamera");        
     }
 
 
     void Update()
     {
+    
+
         if (PauseMenuScript.GameIsPaused == false) { 
         transform.Rotate(new Vector3(0, 0, RotationSpeed) * Time.deltaTime);
 }
@@ -80,7 +80,7 @@ public class AstroidMovement : MonoBehaviour
         }
 
         // kill player
-        if (other.gameObject.tag == "Player" && isinvulnerable == false)
+        if (other.gameObject.tag == "Player")
         {
             Destroy(other.gameObject);
             SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
