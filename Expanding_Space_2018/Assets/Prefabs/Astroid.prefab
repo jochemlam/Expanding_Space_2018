@@ -176,6 +176,8 @@ MonoBehaviour:
   explode: {fileID: 1851657292998466, guid: 481d1539485743940a3ed2d65614f748, type: 2}
   RotationSpeed: 15
   AstroidHP: 3
+  impact: {fileID: 1788503783811846, guid: 359a950397aa4a74c98f70c050046094, type: 2}
+  bullet: {fileID: 1367200639576194, guid: b230672092f9e69499a3c5b9b7d3e1e4, type: 2}
   Stardust: {fileID: 1178639693705384, guid: 3cd4d6c924d89384586bdc07aba95d7c, type: 2}
   maxInt: 10
 --- !u!212 &212371438752728956

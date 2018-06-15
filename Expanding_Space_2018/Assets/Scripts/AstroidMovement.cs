@@ -20,6 +20,10 @@ public class AstroidMovement : MonoBehaviour
     private float RotationSpeed = 50f;
     public int AstroidHP = 3;
 
+    // bullet impact
+    public GameObject impact;
+    public GameObject bullet;
+
     // stardust vars
     public GameObject Stardust;
     public int maxInt = 10;
@@ -76,6 +80,7 @@ public class AstroidMovement : MonoBehaviour
         if (other.gameObject.tag == "Bullet")
         {
             AstroidHP -= 1;
+            Instantiate(impact, transform.position, transform.rotation);
             Destroy(other.gameObject);
         }
 
