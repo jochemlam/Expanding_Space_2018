@@ -7,6 +7,7 @@ public class spawnAstroid : MonoBehaviour {
     List<GameObject> Astroids = new List<GameObject>();
     public GameObject Astroid;
     public GameObject SmallAstroid;
+    public GameObject BigAstroid;
     public float spawnDelay;
     private float spawntimer = 0;
     new GameObject camera;
@@ -17,6 +18,7 @@ public class spawnAstroid : MonoBehaviour {
 
         Astroids.Add(Astroid);
         Astroids.Add(SmallAstroid);
+        Astroids.Add(BigAstroid);
     }
 
 

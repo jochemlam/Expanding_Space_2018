@@ -7,7 +7,7 @@ public class PlayerShoot : MonoBehaviour
 
 
     [SerializeField]
-    private float bulletSpeed = 10f;
+    private float bulletSpeed;
     [SerializeField]
     private Rigidbody2D bullet;
     [SerializeField]
@@ -16,6 +16,7 @@ public class PlayerShoot : MonoBehaviour
     private AudioClip AudioFile;
     [SerializeField]
     private AudioSource SoundSource;
+    private Rigidbody2D bulletClone;
 
 
 
@@ -34,18 +35,21 @@ public class PlayerShoot : MonoBehaviour
         
         Vector3 bulletpos = (transform.position + new Vector3(2f, 0, 0));
 
-        Rigidbody2D bulletClone = (Rigidbody2D)Instantiate(bullet, bulletpos, transform.rotation);
+        bulletClone = (Rigidbody2D)Instantiate(bullet, bulletpos, transform.rotation);
         Physics2D.IgnoreCollision(bulletClone.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-        bulletClone.velocity = transform.right * bulletSpeed;
+        
         Delay = BulletDelay;
     }
 
     // Setup delay between bullets
     void Update()
     {
-        bulletSpeed += 0.00003f;
-        BulletDelay += 0.00001f;
-
+        bulletSpeed = (PlayerMovement.speed * 2);
+        BulletDelay -= 0.00001f;
+        if(bulletClone != null)
+        {
+            bulletClone.velocity = transform.right * bulletSpeed;
+        }
         if (Input.GetKey(KeyCode.Space) && Delay == 0f 
             && PauseMenuScript.GameIsPaused == false)
         {

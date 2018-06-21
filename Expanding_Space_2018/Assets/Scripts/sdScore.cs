@@ -39,7 +39,7 @@ public class SdScore : MonoBehaviour {
 
             yield return new WaitForSeconds(duration);
 
-            Invoke("Destroythis", 2);
+            Destroy(this.gameObject, 1.732f);
         }
         
     }
@@ -47,10 +47,5 @@ public class SdScore : MonoBehaviour {
     public static void addScore(int Amount)
     {
         ScoreScript.ScoreValue += Amount;
-    }
-
-    void Destroythis()
-    {
-        Destroy(this.gameObject);
     }
 }
