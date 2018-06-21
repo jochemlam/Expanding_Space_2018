@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyScript : MonoBehaviour {
-    public Rigidbody2D bullet;
-    public Rigidbody2D Astroid;
+    public Transform bullet;
     new GameObject camera;
 
    void Start () {
-        //bullet = GetComponent<Rigidbody2D>();
         camera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 

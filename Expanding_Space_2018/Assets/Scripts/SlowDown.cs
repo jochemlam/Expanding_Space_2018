@@ -6,10 +6,27 @@ public class SlowDown : MonoBehaviour {
 
     public float multiplier = 1.4f;
     public float duration = 3f;
-
     public float modifier = 1.5f;
-
     public GameObject pickupEffect;
+
+    // destroy object out of screen
+    new GameObject camera;
+    public Transform thisObject;
+
+    private void Start()
+    {
+        camera = GameObject.FindGameObjectWithTag("MainCamera");
+    }
+
+    private void Update()
+    {
+        float minRangex = camera.transform.position.x - 8.5f;
+
+        if (thisObject.transform.position.x <= minRangex)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,7 +38,6 @@ public class SlowDown : MonoBehaviour {
 
     IEnumerator Pickup(Collider2D Player)
     {
-        Debug.Log("Slow Down Enabled");
         Instantiate(pickupEffect, transform.position, transform.rotation);
 
         GetComponent<SpriteRenderer>().enabled = false;
@@ -35,7 +51,6 @@ public class SlowDown : MonoBehaviour {
 
         //Player.transform.localScale /= multiplier;
         MoveWorld.WorldSpeed = MoveWorld.WorldSpeed * modifier;
-        Debug.Log("Slow Down Disabled");
 
     Destroy(gameObject);
 

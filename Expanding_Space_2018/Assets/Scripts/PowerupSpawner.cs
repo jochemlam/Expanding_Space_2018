@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerupSpawner : MonoBehaviour {
 
     List<GameObject> Powerups = new List<GameObject>();
-    public float spawnDelay = 1f;
+    public float spawnDelay;
     private float spawntimer = 0;
     new GameObject camera;
     public GameObject ShieldPowerup;
@@ -15,9 +15,6 @@ public class PowerupSpawner : MonoBehaviour {
     private void Start()
     {
         camera = GameObject.FindGameObjectWithTag("MainCamera");
-        ShieldPowerup = GameObject.FindGameObjectWithTag("ShieldPowerup");
-        SpeedUp = GameObject.FindGameObjectWithTag("SpeedUp");
-        SpeedDown = GameObject.FindGameObjectWithTag("SpeedUp");
     }
 
     private void Awake()
@@ -31,6 +28,16 @@ public class PowerupSpawner : MonoBehaviour {
     void Update()
     {
         spawntimer += Time.deltaTime;
+
+        if (spawnDelay < 5 && PauseMenuScript.GameIsPaused == false)
+        {
+            spawnDelay += 0.0002f;
+        }
+        else
+        {
+            spawnDelay = 5;
+        }
+
         if (spawntimer >= spawnDelay && PauseMenuScript.GameIsPaused == false)
         {
             SpawnPowerup();
@@ -40,7 +47,7 @@ public class PowerupSpawner : MonoBehaviour {
     private void SpawnPowerup()
     {
         Vector3 spawnPosition = new Vector3(camera.transform.position.x + 10f, Random.Range(5f, -5f), 0);
-        Instantiate(Powerups[Random.Range(0, 2)], spawnPosition, Quaternion.identity);
+        Instantiate(Powerups[Random.Range(0, Powerups.Count)], spawnPosition, Quaternion.identity);
 
         spawntimer = 0;
     }

@@ -89,7 +89,7 @@ public class AstroidMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
             SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
-            SceneManager.UnloadSceneAsync("Main");
+            //SceneManager.UnloadSceneAsync("Main");
         }
 
     }

@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 61385224107242810}
   m_Layer: 0
   m_Name: SpeedDown
-  m_TagString: Untagged
+  m_TagString: SpeedDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 61613075789024020}
   m_Layer: 0
   m_Name: SpeedUp
-  m_TagString: Untagged
+  m_TagString: SpeedUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,9 +278,9 @@ MonoBehaviour:
   decrease: 2
   duration: 5
   modifier: 1.5
-  _MoveWorld: {fileID: 0}
   pickupEffect: {fileID: 1519927293720892, guid: 434b58bfa9210ee41b4803f0f2a5c0be,
     type: 2}
+  thisObject: {fileID: 4744296989519762}
 --- !u!114 &114221824030856358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,6 +297,7 @@ MonoBehaviour:
   modifier: 1.5
   pickupEffect: {fileID: 1519927293720892, guid: 434b58bfa9210ee41b4803f0f2a5c0be,
     type: 2}
+  thisObject: {fileID: 4002123753629356}
 --- !u!114 &114785450208136022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,8 +312,8 @@ MonoBehaviour:
   duration: 3
   pickupEffect: {fileID: 1519927293720892, guid: 434b58bfa9210ee41b4803f0f2a5c0be,
     type: 2}
-  shield: {fileID: 1592846788566568, guid: 1022a82d57430be458f4fa258431ee8e, type: 2}
-  player: {fileID: 1127381586126516, guid: 7c04e9486aac15f42889146c83b2f247, type: 2}
+  shield: {fileID: 0}
+  thisObject: {fileID: 4437234897070576}
 --- !u!212 &212112189193766006
 SpriteRenderer:
   m_ObjectHideFlags: 1

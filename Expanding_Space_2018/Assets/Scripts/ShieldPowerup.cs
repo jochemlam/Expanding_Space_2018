@@ -7,59 +7,44 @@ public class ShieldPowerup : MonoBehaviour
 
     public float duration = 5f;
     public GameObject pickupEffect;
-    public GameObject shield;
-    public GameObject player;
+    public Shield shield;
     public static bool isinvulnerable;
+
+    // destroy object out of screen
+    new GameObject camera;
+    public Transform thisObject;
 
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        shield = GameObject.FindGameObjectWithTag("Shield");
-        shield.SetActive(false);
-        player.GetComponent<Collider2D>().enabled = true;
+        camera = GameObject.FindGameObjectWithTag("MainCamera");
+        shield = GameObject.FindGameObjectWithTag("Shield").GetComponent<Shield>();
+    }
+
+    private void Update()
+    {
+        float minRangex = camera.transform.position.x - 8.5f;
+
+        if (thisObject.transform.position.x <= minRangex)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "Player")
         {
-            StartCoroutine(Pickup(other));
+            shield.Activate(duration);
+            Instantiate(pickupEffect, transform.position, transform.rotation);
+            OnPickup();
         }
     }
 
-    void Update()
+    void OnPickup()
     {
-       shield.transform.position = player.transform.position;
-    }
-
-    IEnumerator Pickup(Collider2D Player)
-    {
-
-        Debug.Log("Shield picked up");
-        Instantiate(pickupEffect, transform.position, transform.rotation);
-
-        //remove pickup
-        GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
-
-        //activate shield
-        player.GetComponent<Collider2D>().enabled = false;
-        shield.SetActive(true);
-
-        // activate shield here
-        ShieldPowerup.isinvulnerable = true;
-
-        yield return new WaitForSeconds(duration);
-
-        // deactivate shield here
-        player.GetComponent<Collider2D>().enabled = true;
-        shield.SetActive(false);
-
-        ShieldPowerup.isinvulnerable = false;
-
-        Debug.Log("Shield removed");
-
-        Destroy(gameObject);
+        GetComponent<SpriteRenderer>().enabled = false;
+        Destroy(gameObject, duration);
     }
 }
