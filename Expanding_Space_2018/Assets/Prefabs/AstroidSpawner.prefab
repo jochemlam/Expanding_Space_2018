@@ -80,7 +80,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -96,7 +95,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -126,4 +124,5 @@ MonoBehaviour:
   Astroid: {fileID: 1194448534255634, guid: 71df1c795f906dd4c9cb24e5fae471b6, type: 2}
   SmallAstroid: {fileID: 1301605687277374, guid: 7e1f35c6c436df94e8394e8e1ff6f5f1,
     type: 2}
+  BigAstroid: {fileID: 1541481553510986, guid: 1650cb33ad5c3a24796a55427e4cd7a8, type: 2}
   spawnDelay: 2
