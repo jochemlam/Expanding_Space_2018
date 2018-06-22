@@ -44,7 +44,7 @@ public class PlayerShoot : MonoBehaviour
     // Setup delay between bullets
     void Update()
     {
-        bulletSpeed = (PlayerMovement.speed * 2);
+        bulletSpeed = (PlayerMovement.speed * 4);
         BulletDelay -= 0.00001f;
         if(bulletClone != null)
         {

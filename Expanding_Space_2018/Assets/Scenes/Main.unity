@@ -365,7 +365,7 @@ Prefab:
     - target: {fileID: 114249461450352570, guid: 7c04e9486aac15f42889146c83b2f247,
         type: 2}
       propertyPath: BulletDelay
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c04e9486aac15f42889146c83b2f247, type: 2}
@@ -757,7 +757,7 @@ MonoBehaviour:
   Astroid: {fileID: 1194448534255634, guid: 71df1c795f906dd4c9cb24e5fae471b6, type: 2}
   SmallAstroid: {fileID: 1301605687277374, guid: 7e1f35c6c436df94e8394e8e1ff6f5f1,
     type: 2}
-  BigAstroid: {fileID: 0}
+  BigAstroid: {fileID: 1541481553510986, guid: 1650cb33ad5c3a24796a55427e4cd7a8, type: 2}
   spawnDelay: 2
 --- !u!1001 &1809014476
 Prefab:
