@@ -20,7 +20,7 @@ public class SpeedUp : MonoBehaviour {
 
     private void Update()
     {
-        float minRangex = camera.transform.position.x - 8.5f;
+        float minRangex = camera.transform.position.x - 10.5f;
 
         if (thisObject.transform.position.x <= minRangex)
         {

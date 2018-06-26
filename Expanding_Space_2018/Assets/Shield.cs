@@ -6,13 +6,11 @@ public class Shield : MonoBehaviour {
 
     private SpriteRenderer spriteRenderer;
     private Transform player;
-    //private Collider2D playerCollider;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        //playerCollider = player.GetComponent<Collider2D>();
     }
 
     private void Start()
@@ -28,7 +26,6 @@ public class Shield : MonoBehaviour {
     private void SetActive(bool active)
     {
         spriteRenderer.enabled = active;
-        //playerCollider.enabled = !active;
     }
 
     IEnumerator ShieldTimer(float duration)
