@@ -8,11 +8,14 @@ public class ScoreScript : MonoBehaviour
     
     public static float ScoreValue = 0f;
     public static float scoreAmount;
-    Text score;
+    public Text score;
+    public Text highScore;
     void Start()
     {
         score = GetComponent<Text>();
+        highScore = GetComponent<Text>();
         scoreAmount = 0.0334f;
+        highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
     }
 
   
@@ -20,7 +23,15 @@ public class ScoreScript : MonoBehaviour
     {
         
         ScoreValue += scoreAmount;
+        int number = Mathf.RoundToInt(ScoreValue);
+        score.text = number.ToString();
 
+        if (number > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", number);
+            highScore.text = number.ToString();
+
+        }
         score.text = "Score: " + Mathf.Round(ScoreValue);
     }
 }
