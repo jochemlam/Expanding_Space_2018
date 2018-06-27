@@ -129,9 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 856a6dbb9ffeb6349aeeebe418171a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planet: []
-  gravity: 220
-  range: 12
+  BlackHole: []
+  gravity: 5000
+  range: 15
 --- !u!114 &114962019879252194
 MonoBehaviour:
   m_ObjectHideFlags: 1

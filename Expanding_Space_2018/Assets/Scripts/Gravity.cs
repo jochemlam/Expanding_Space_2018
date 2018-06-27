@@ -6,7 +6,7 @@ public class Gravity : MonoBehaviour
 {
 
     //makes the variables and arrays it for multiple object use
-    public GameObject[] planet;
+    public GameObject[] BlackHole;
     public float gravity = 30f;
     [SerializeField]
     private float range = 10;
@@ -23,18 +23,17 @@ public class Gravity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        planet = GameObject.FindGameObjectsWithTag("BlackHole");
-        //this is used for the planet gravity pull
+        BlackHole = GameObject.FindGameObjectsWithTag("BlackHole");
+        //this is used for the BlackHole gravity pull
 
-        for (int i = 0; i < planet.Length; i++)
+        for (int i = 0; i < BlackHole.Length; i++)
         {
-            Vector2 offset = planet[i].transform.position - transform.position;
+            Vector2 offset = BlackHole[i].transform.position - transform.position;
 
             float gravitysqr = offset.sqrMagnitude;
 
             if (gravitysqr > 0.001f && gravitysqr < range)
             {
-                //transform.up = -offset;
                 rig2d.AddForce(gravity * offset.normalized / gravitysqr);
             }
 
