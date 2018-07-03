@@ -44,14 +44,21 @@ public class PlayerShoot : MonoBehaviour
     // Setup delay between bullets
     void Update()
     {
+
         bulletSpeed = (PlayerMovement.speed * 4);
         BulletDelay -= 0.00001f;
-        if(bulletClone != null)
+
+        float checkFireButtons = Input.GetAxisRaw("FireButtons");
+        float checkLeftTrigger = Input.GetAxisRaw("LeftTrigger");
+        float checkRightTrigger = Input.GetAxisRaw("RightTrigger");
+
+        if (bulletClone != null)
         {
             bulletClone.velocity = transform.right * bulletSpeed;
         }
-        if (Input.GetKey(KeyCode.Space) && Delay == 0f 
-            && PauseMenuScript.GameIsPaused == false)
+
+        if ((Input.GetKey(KeyCode.Space) || checkLeftTrigger != 0 || checkRightTrigger != 0 || checkFireButtons != 0)
+            && Delay == 0f && PauseMenuScript.GameIsPaused == false)
         {
 
             Fire();
