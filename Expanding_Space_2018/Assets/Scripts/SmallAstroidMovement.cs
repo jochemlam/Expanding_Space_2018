@@ -22,6 +22,7 @@ public class SmallAstroidMovement : MonoBehaviour {
 
     // stardust vars
     public GameObject Stardust;
+    [Tooltip("1 in ... % chance to trigger")]
     public int maxInt = 10;
 
     // Use this for initialization

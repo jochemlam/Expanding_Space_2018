@@ -13,6 +13,7 @@ public class ShieldPowerup : MonoBehaviour
     // destroy object out of screen
     new GameObject camera;
     public Transform thisObject;
+    private bool isActive;
 
 
     private void Start()
@@ -25,7 +26,7 @@ public class ShieldPowerup : MonoBehaviour
     {
         float minRangex = camera.transform.position.x - 10.5f;
 
-        if (thisObject.transform.position.x <= minRangex)
+        if (thisObject.transform.position.x <= minRangex && isActive != true)
         {
             Destroy(this.gameObject);
         }
@@ -35,6 +36,7 @@ public class ShieldPowerup : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
+            isActive = true;
             shield.Activate(duration);
             Instantiate(pickupEffect, transform.position, transform.rotation);
             OnPickup();
@@ -45,6 +47,7 @@ public class ShieldPowerup : MonoBehaviour
     {
         GetComponent<Collider2D>().enabled = false;
         GetComponent<SpriteRenderer>().enabled = false;
+        isActive = false;
         Destroy(gameObject, duration);
     }
 }

@@ -34,6 +34,7 @@ public class Gravity : MonoBehaviour
 
             if (gravitysqr > 0.001f && gravitysqr < range)
             {
+                rig2d.constraints = RigidbodyConstraints2D.None;
                 rig2d.AddForce(gravity * offset.normalized / gravitysqr);
             }
 

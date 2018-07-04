@@ -26,6 +26,7 @@ public class AstroidMovement : MonoBehaviour
 
     // stardust vars
     public GameObject Stardust;
+    [Tooltip("1 in ... % chance to trigger")]
     public int maxInt = 10;
 
 

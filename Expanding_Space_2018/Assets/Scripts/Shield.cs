@@ -44,5 +44,6 @@ public class Shield : MonoBehaviour {
 
         SetActive(false);
         Physics2D.IgnoreLayerCollision(8, 12, false);
+
     }
 }

@@ -12,6 +12,7 @@ public class SlowDown : MonoBehaviour {
     // destroy object out of screen
     new GameObject camera;
     public Transform thisObject;
+    private bool isActive;
 
     private void Start()
     {
@@ -38,6 +39,7 @@ public class SlowDown : MonoBehaviour {
 
     IEnumerator Pickup(Collider2D Player)
     {
+        isActive = true;
         Instantiate(pickupEffect, transform.position, transform.rotation);
 
         GetComponent<SpriteRenderer>().enabled = false;
@@ -51,7 +53,7 @@ public class SlowDown : MonoBehaviour {
 
         //Player.transform.localScale /= multiplier;
         MoveWorld.WorldSpeed = MoveWorld.WorldSpeed * modifier;
-
+        isActive = false;
     Destroy(gameObject);
 
 
