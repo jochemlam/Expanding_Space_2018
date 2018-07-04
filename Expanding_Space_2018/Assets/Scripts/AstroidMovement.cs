@@ -88,8 +88,9 @@ public class AstroidMovement : MonoBehaviour
         // kill player
         if (other.gameObject.tag == "Player")
         {
-            Destroy(other.gameObject);
-            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            Destroy(other.gameObject, 0.5f);
+            KillPlayer.PlayerDead = true;
+            //SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
             //SceneManager.UnloadSceneAsync("Main");
         }
 

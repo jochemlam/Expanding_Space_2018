@@ -13,16 +13,21 @@ public class KillPlayer : MonoBehaviour {
     }
     private void Update()
     {
-        
+        Debug.Log(KillPlayer.PlayerDead);
         if (PlayerDead == true)
         {
-            ScoreScript.scoreAmount = 0f;
+            //Debug.Log("sdfg");
+
+           GameOverScreen.acquiredScore = ScoreScript.ScoreValue;
+            Debug.Log("sdfg" + ScoreScript.ScoreValue);
+
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
 
 #pragma warning disable CS0618 // Type or member is obsolete
             SceneManager.UnloadScene("Main");
 #pragma warning restore CS0618 // Type or member is obsolete
 
-            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            
         }
     }
     
