@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
-        
+
+    public Text HighscoreText;
+
+    
+
     public void EndGame()
         {
         #if UNITY_EDITOR
